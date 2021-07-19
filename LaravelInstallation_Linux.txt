@@ -23,3 +23,14 @@
 -- -------------------------------  method 2 - mediante Composer
 
     --  composer create-project laravel/laravel PROJECT_NAME
+
+
+--  Laravel RUN
+
+ --  Accesso da localhost:8000 [ con vhosts.conf DISABILITATO su httpd.conf - # Include etc/extra/httpd-vhosts.conf ] 
+    --  cd PROJECT_PATH
+    --  php artisan serve
+    --  aprire in browser http://localhost:8000/
+
+    --  Accesso da VirtualHost [ con vhosts.conf ABILITATO su httpd.conf- Include etc/extra/httpd-vhosts.conf ]
+    --  aprire in browser il ServerName/public
