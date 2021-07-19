@@ -1,0 +1,25 @@
+--  composer create-project laravel/laravel example-app
+--  cd example-app
+--  php artisan serve 
+
+
+
+--  cd ~/.config/composer/vendor/bin
+--  pwd     =>  /home/PERSONAL_FOLDER/.config/composer/vendor/bin
+--  cd
+--  nano .bashrc
+--  aggiungere export PATH=/home/PERSONAL_FOLDER/.config/composer/vendor/bin:$PATH => Save & Exit
+--  source .bashrc
+--  ora il comando laravel è disponibile globalmente
+
+-- -------------------------------  creazione nuovo progetto Laravel
+
+--  cd /opt/lampp/htdocs/WWW/LARAVEL/
+
+-- -------------------------------  method 1 - mediante comando laravel
+
+    --  laravel new PROJECT_NAME
+
+-- -------------------------------  method 2 - mediante Composer
+
+    --  composer create-project laravel/laravel PROJECT_NAME
