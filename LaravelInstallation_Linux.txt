@@ -1,8 +1,4 @@
---  composer create-project laravel/laravel example-app
---  cd example-app
---  php artisan serve 
-
-
+-- -------------------------------  comando Laravel
 
 --  cd ~/.config/composer/vendor/bin
 --  pwd     =>  /home/PERSONAL_FOLDER/.config/composer/vendor/bin
@@ -10,11 +6,10 @@
 --  nano .bashrc
 --  aggiungere export PATH=/home/PERSONAL_FOLDER/.config/composer/vendor/bin:$PATH => Save & Exit
 --  source .bashrc
+
 --  ora il comando laravel è disponibile globalmente
 
--- -------------------------------  creazione nuovo progetto Laravel
-
---  cd /opt/lampp/htdocs/WWW/LARAVEL/
+-- -------------------------------  creazione nuovo progetto Laravel [ cd /opt/lampp/htdocs/WWW/LARAVEL/ ]
 
 -- -------------------------------  method 1 - mediante comando laravel
 
@@ -25,7 +20,12 @@
     --  composer create-project laravel/laravel PROJECT_NAME
 
 
---  Laravel RUN
+-- -------------------------------  Laravel RUN
+
+ -- cd /opt/lampp/htdocs/WWW/LARAVEL/PROJECT_NAME
+ --  php artisan serve
+ --  aprire in browser http://localhost:8000/
+ 
 
  --  Accesso da localhost:8000 [ con vhosts.conf DISABILITATO su httpd.conf - # Include etc/extra/httpd-vhosts.conf ] 
     --  cd PROJECT_PATH
