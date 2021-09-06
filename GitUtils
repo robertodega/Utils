@@ -1,0 +1,8 @@
+--  ------------------------------- Upload projects to gitHub page ----------------------------
+
+    --  Github page
+        --  Repositories    ->  new ->  PROJECT_NAME
+
+    --  git cli
+        --  git remote add origin https://github.com/USER_NAME/PROJECT_NAME.git     [ git remote add origin https://github.com/robertodega/laravelTest.git ]
+        --  git push -u origin BRANCH_NAME
