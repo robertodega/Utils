@@ -1,0 +1,20 @@
+
+[ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent ]
+
+cd
+cd .ssh
+ssh-keygen
+
+aprire pulsante CODE > SSH
+copiare public key 
+	
+
+git clone git@github.com:robertodega/DEV.git
+
+cd DEV
+git add .
+git commit -m "COMMENT"
+git branch -M main
+git remote add origin git@github.com:robertodega/DEV.git
+git push -u origin main
+
