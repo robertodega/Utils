@@ -1,0 +1,38 @@
+#       General 
+#       -------
+alias note='xdg-open '
+alias rootDir='clear && cd ~'
+alias aliases='nano ~/.bash_aliases'
+alias x='exit'
+alias bashmem='source ~/.bashrc'
+alias lsla='clear && pwd && ls -la'
+
+#       MySQL 
+#       ----
+alias mysql='clear && mysql -u root'
+
+#       GIT
+#       ---
+alias gitBranch='clear && git branch'
+alias gitStatus='gitBranch && git status'
+alias gitAdd='clear && git add .'
+alias gitCommit='clear && git commit -m'
+alias gitProj='clear && git branch && git status'
+alias gitLog='clear && git log'
+
+#       PYTHON
+#       ------
+alias drfInstall='clear && cd ~/PROJECTS/Scripts/Bash && ./djangoRestFrameworkInstall'
+
+#       POSTGRESQL
+#       ---------
+alias posgresConf='clear && sudo nano /etc/postgresql/14/main/postgresql.conf'
+alias postgresStatus='clear && sudo systemctl status postgresql'
+alias postgresRestart='clear && sudo systemctl restart postgresql'
+alias postgresConnect='clear && sudo -i -u postgres'
+
+#       PATHS
+#       -----
+alias reactDir='clear && cd ~/PROJECTS/React && lsla'
+alias pythonDevDir='clear && cd ~/PROJECTS/Python/DEV && lsla'
+alias pythonTestDir='clear && cd ~/PROJECTS/Python/TESTS && lsla'
