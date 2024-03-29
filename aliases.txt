@@ -20,10 +20,6 @@ alias gitCommit='clear && git commit -m'
 alias gitProj='clear && git branch && git status'
 alias gitLog='clear && git log'
 
-#       PYTHON
-#       ------
-alias drfInstall='clear && cd ~/PROJECTS/Scripts/Bash && ./djangoRestFrameworkInstall'
-
 #       POSTGRESQL
 #       ---------
 alias posgresConf='clear && sudo nano /etc/postgresql/14/main/postgresql.conf'
@@ -34,5 +30,4 @@ alias postgresConnect='clear && sudo -i -u postgres'
 #       PATHS
 #       -----
 alias reactDir='clear && cd ~/PROJECTS/React && lsla'
-alias pythonDevDir='clear && cd ~/PROJECTS/Python/DEV && lsla'
-alias pythonTestDir='clear && cd ~/PROJECTS/Python/TESTS && lsla'
+alias pythonDir='clear && cd ~/PROJECTS/Python && lsla'

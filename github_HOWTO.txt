@@ -1,20 +1,32 @@
 
 [ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent ]
 
+#   -------------------------------------
+#   Attivazione SSH con remote repository
+#   -------------------------------------
 cd
 cd .ssh
 ssh-keygen
 
-aprire pulsante CODE > SSH
+aprire su GitHub pulsante CODE > SSH
 copiare public key 
-	
 
-git clone git@github.com:robertodega/DEV.git
+#   ----------------------------------------------	
+#   Prima inizializzazione folder da sincronizzare
+#   ----------------------------------------------
+cd <LOCAL_FOLDER>
+git init                                #   inizializzazione repo con GIT
+git clone <REMOTE_FOLDER>               #   git@github.com:robertodega/DEV.git
+git branch -M main                      #   creazione branch (stesso nome branch remoto)
+git remote add origin <REMOTE_FOLDER>   #   indicazione del branch remoto
+git pull origin main                    #   allineamento contenuto locale a contenuto remoto
 
-cd DEV
+#   ---------------------------------------------------
+#   Modifiche a file da sincronizzare con branch remoto
+#   ---------------------------------------------------
 git add .
 git commit -m "COMMENT"
-git branch -M main
-git remote add origin git@github.com:robertodega/DEV.git
-git push -u origin main
+git push --set-upstream origin main
+git push                                #   o anche git push -u origin main
+
 
