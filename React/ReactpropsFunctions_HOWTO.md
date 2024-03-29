@@ -1,9 +1,8 @@
 
-                                                -------------------------
-                                                App structure preparation
-                                                -------------------------
+App structure preparation
+-------------------------
 
-#   props is used to have dynamic apps
+    #   props is used to have dynamic apps
 
     >   cd ~/PROJECTS/React/TESTS
     >   npm init react-app props-funcions
@@ -12,72 +11,66 @@
     >   cd src/components
     >   touch Header.js Main.js Sidebar.js
     >   cd ~/PROJECTS/React/TESTS/props-funcions/src
-    >   nano App.js
 
-----------------------------------------------------------------
-import Header from './components/Header';
-import Main from './components/Main';
-import Sidebar from './components/Sidebar';
+App.js
+------
+    import Header from './components/Header';
+    import Main from './components/Main';
+    import Sidebar from './components/Sidebar';
 
-import './App.css';
+    import './App.css';
 
-function App() {
-  return (
-    <div>
-        <Header name="Roby" color="blue" />
-        <Main greet="Greetings" />
-        <Sidebar greet="Greetings" />
-    </div>
-  )
-}
-export default App;
-----------------------------------------------------------------
-
-    >   nano Header.js
-
-----------------------------------------------------------------
-import React from "react";
-
-import '../App.css';
-
-function Header(props) {
-    console.log(props)
-    return (
+    function App() {
+      return (
         <div>
-            Hello from Header!
-            <li>{props.name}</li>
-            <li>{props.color}</li>
+            <Header name="Roby" color="blue" />
+            <Main greet="Greetings" />
+            <Sidebar greet="Greetings" />
         </div>
-    )
-}
-export default Header;
-----------------------------------------------------------------
+      )
+    }
+    export default App;
 
-    >   nano Main.js
+Header.js
+---------
 
-----------------------------------------------------------------
-import React from "react";
+    import React from "react";
 
-import './App.css';
+    import '../App.css';
 
-function Main(props) {
-  return <h2>{props.greet}Hello from Main!</h2>
-}
-export default Main;
-----------------------------------------------------------------
+    function Header(props) {
+        console.log(props)
+        return (
+            <div>
+                Hello from Header!
+                <li>{props.name}</li>
+                <li>{props.color}</li>
+            </div>
+        )
+    }
+    export default Header;
 
-    >   nano Sidebar.js
+Main.js
+-------
+    import React from "react";
 
-----------------------------------------------------------------
-import React from "react";
+    import './App.css';
 
-import './App.css';
+    function Main(props) {
+      return <h2>{props.greet}Hello from Main!</h2>
+    }
+    export default Main;
 
-function Sidebar(props) {
-  return <h2>{props.greet}Hello from Sidebar!</h2>
-}
-export default Sidebar;
-----------------------------------------------------------------
+Sidebar.js
+----------
+    import React from "react";
 
+    import './App.css';
+
+    function Sidebar(props) {
+      return <h2>{props.greet}Hello from Sidebar!</h2>
+    }
+    export default Sidebar;
+---
     >   cd ~/PROJECTS/React/TESTS/props-funcions
     >   npm start

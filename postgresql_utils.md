@@ -4,7 +4,7 @@ postgres:
 
 		postgres=# ALTER DATABASE fastfm OWNER TO fastfmdbuser;
 
-	assegnare ruolo per fastfmdbuser a utente roby
+assegnare ruolo per fastfmdbuser a utente roby
 
 		postgres=# GRANT CONNECT ON DATABASE fastfm TO roby;
 		postgres=# GRANT ALL PRIVILEGES ON DATABASE fastfm TO roby;
