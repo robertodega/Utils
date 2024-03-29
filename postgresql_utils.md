@@ -1,39 +1,39 @@
 
 postgres:
-	cambiare owner da fastfm a fastfmdbuser
+	cambiare owner di <DB_NAME> a <NEW_USER>
 
-		postgres=# ALTER DATABASE fastfm OWNER TO fastfmdbuser;
+		postgres=# ALTER DATABASE <DB_NAME> OWNER TO <NEW_USER>;
 
-assegnare ruolo per fastfmdbuser a utente roby
+assegnare ruolo per <NEW_USER> a utente <USER>
 
-		postgres=# GRANT CONNECT ON DATABASE fastfm TO roby;
-		postgres=# GRANT ALL PRIVILEGES ON DATABASE fastfm TO roby;
+		postgres=# GRANT CONNECT ON DATABASE <DB_NAME> TO <USER>;
+		postgres=# GRANT ALL PRIVILEGES ON DATABASE <DB_NAME> TO <USER>;
 
 da terminale ubuntu
-	ip address												#	indirizzo ip macchina remota ( 172.19.235.173 )
+	ip address												#	indirizzo ip macchina remota ( <IP_ADDRESS> )
 	
-	inserire alias per ip address in C:\Windows\System32\drivers\etc\hosts
+inserire alias per ip address in C:\Windows\System32\drivers\etc\hosts
 	
 	es.
-	172.19.235.173 ubuntuv
+	<IP_ADDRESS> <ALIAS_NAME>
 	
 	
 da cmd win
 
-	ssh roby@ubuntuv										#	collegamento a macchina remota virtuale ubuntu ( ssh 172.19.235.173 )
-	ctrl d	( o exit o x )									#	uscita da collegamento a macchina remota virtuale ubuntu
-	sudo systemctl status postgresql						#	postgresql status
-	sudo systemctl restart postgresql						#	postgresql service restart
-	
-	sudo nano /etc/postgresql/14/main/postgresql.conf		#	postgresql conf file
-	sudo nano /etc/postgresql/14/main/pg_hba.conf			# 	host-based authentication file
-	sudo nano /etc/postgresql/14/main/pg_ident.conf    		#	ident configuration file
+	ssh <USER>@<ALIAS_NAME>										#	collegamento a macchina remota virtuale ubuntu ( ssh <IP_ADDRESS> )
+	ctrl d	( o exit o x )										#	uscita da collegamento a macchina remota virtuale ubuntu
+	sudo systemctl status postgresql							#	postgresql status
+	sudo systemctl restart postgresql							#	postgresql service restart
 
-	sudo -i -u postgres										#	collegamento a postgres@roby-Virtual-Machine
-	psql													#	postgres terminal connection
-	\l														#	list of db
-	\du														#	list of roles
-	create user roby with encrypted password 'roby_Fast';	#	user create
+	sudo nano /etc/postgresql/14/main/postgresql.conf			#	postgresql conf file
+	sudo nano /etc/postgresql/14/main/pg_hba.conf				# 	host-based authentication file
+	sudo nano /etc/postgresql/14/main/pg_ident.conf    			#	ident configuration file
+
+	sudo -i -u postgres											#	collegamento a postgres@<USER>-Virtual-Machine
+	psql														#	postgres terminal connection
+	\l															#	list of db
+	\du															#	list of roles
+	create user <USER> with encrypted password '<PASSWORD>';	#	user create
 	
 
 Parametri DBeaver:
@@ -41,7 +41,7 @@ Parametri DBeaver:
 	-	Connected by: 	Host
 	-	Host:			ip address macchina remota
 	-	Port:			5432
-	-	Database:		fastfm
-	-	Username:		roby		( o Owner from "sudo -i -u postgres" | "psql" | "\l" )
-	-	Password:		roby_Fast
+	-	Database:		<DB_NAME>
+	-	Username:		<USER>		( o Owner from "sudo -i -u postgres" | "psql" | "\l" )
+	-	Password:		<PASSWORD>
 
