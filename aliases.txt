@@ -31,6 +31,5 @@ alias postgresStatus='clear && sudo systemctl status postgresql'
 alias postgresRestart='clear && sudo systemctl restart postgresql'
 
 #       SCRIPTS
-#       ------.
-alias utils='clear && python3 /opt/lampp/htdocs/WWW/PROJECTS/Python/TESTS/utils.py'
-
+#       -------
+alias utils='clear && python3 /opt/lampp/htdocs/WWW/PROJECTS/GitHub/utils.py'
