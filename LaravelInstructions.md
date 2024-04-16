@@ -33,11 +33,25 @@ LARAVEL
 
 create a new Laravel project via Composer
 
-        composer create-project laravel/laravel <APP_NAME>
+        > composer create-project laravel/laravel <APP_NAME>
 
 Or create a new Laravel projects by globally installing the Laravel installer via Composer
 
-        composer global require laravel/installer
+        > composer global require laravel/installer
+
+        > cd ~/.config/composer/vendor/bin/
+        > pwd
+         - copy this path into .bashrc file
+
+                ...
+                export PATH=<COPIED_PATH>:$PATH
+        > laravel
+
+                Laravel Installer 5.7.1
+                        Usage:
+                        ...
+                        
+
         laravel new <APP_NAME>
 
 start Laravel's local development server using the Laravel's Artisan CLI serve command
