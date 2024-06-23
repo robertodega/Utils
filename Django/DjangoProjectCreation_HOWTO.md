@@ -4,7 +4,7 @@ project creation in Django
 --------------------------
 
     >   $ mkdir <PROJ_NAME> && cd <PROJ_NAME>
-    >   $ python3 -m venv env
+    >   $ python3 -m venv venv
 
 if it doesn't work:
 
@@ -16,7 +16,7 @@ if it doesn't work:
 project activation
 ------------------
 
-    >   $ source env/bin/activate                               #   source env/Scripts/activate [ for Windows ]
+    >   $ source venv/bin/activate                               #   source env/Scripts/activate [ for Windows ]
 
     >   (env) $ pip install django                              #   (env) $ python.exe -m pip install --upgrade pip [ if requested ]
     >   (env) $ pip install djangorestframework
